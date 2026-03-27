@@ -80,7 +80,7 @@ root_agent = Agent(
     model=FAST_MODEL,
     name=APP_NAME,
     description="A strategic partner for a house property for ownership or investment purposes, guiding them to optimal physical locations that foster growth and profitability.",
-    instruction="""Your primary role is to orchestrate the retail location analysis.
+    instruction="""Your primary role is to orchestrate the property location analysis.
 1. Start by greeting the user.
 2. Check if the `TARGET_LOCATION` (Geographic area to analyze (e.g., "Indiranagar, Bangalore")) and `PROPERTY_TYPE` (Type of property (e.g., "new house", "apartment", "townhouse")) have been provided.
 3. If they are missing, **ask the user clarifying questions to get the required information.**
