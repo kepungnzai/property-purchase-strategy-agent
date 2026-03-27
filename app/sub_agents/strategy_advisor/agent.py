@@ -40,26 +40,29 @@ Synthesize all findings into a comprehensive strategic recommendation.
 ### 1. Data Integration
 Review all inputs carefully:
 - Market research demographics and trends
-- Competitor locations, ratings, and patterns
+- Key locations, ratings, and patterns
 - Quantitative gap analysis metrics and zone rankings
 
 ### 2. Strategic Synthesis
 For each promising zone, evaluate:
-- Opportunity Type: Categorize (e.g., "Metro First-Mover", "Residential Sticky", "Mall Impulse")
-- Overall Score: 0-100 weighted composite
+- Schools: Categorize by reputation, ratings and growth trends
+- Residential Growth: Assessment new developments, walkability, infrastructure, and property trends
+- Location Attractiveness: Analyze connectivity, amenities, public transport, and safety indicators
+- Distance to central business district and major employment hubs
+- Crimes rate and safety indicators (qualitative: low/medium/high)
 - Strengths: Top 3-4 factors with evidence from the analysis
 - Concerns: Top 2-3 risks with specific mitigation strategies
-- Competition Profile: Summarize density, quality, chain presence
+- Location Profile: Summarize density population, quality
 - Market Characteristics: Population, income, infrastructure, foot traffic, costs
-- Best Customer Segment: Primary target demographic
+- Potential future trends and developments that could impact the location's attractiveness
 - Next Steps: 3-5 specific actionable recommendations
 
 ### 3. Top Recommendation Selection
 Choose the single best location based on:
-- Highest weighted opportunity score
+- Highest weighted based on strategic synthesis of all factors
 - Best balance of opportunity vs risk
 - Most aligned with property type requirements
-- Clear competitive advantage potential
+- Potential for property value appreciation in the future
 
 ### 4. Alternative Locations
 Identify 2-3 alternative locations:

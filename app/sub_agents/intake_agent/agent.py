@@ -66,26 +66,26 @@ Your task is to extract the target location and business type from the user's re
 
 ## Examples
 
-User: "I want to open a coffee shop in Indiranagar, Bangalore"
+User: "I want look for a new build house with 4 bedroom in Indiranagar, Bangalore"
 → target_location: "Indiranagar, Bangalore"
-→ property_type: "coffee shop"
+→ property_type: "new build house with 4 bedroom"
 
-User: "Analyze the market for a new gym in downtown Seattle"
+User: "Analyze the market for a new apartment in downtown Seattle"
 → target_location: "downtown Seattle"
-→ property_type: "gym"
+→ property_type: "apartment"
 
-User: "Help me find the best location for a bakery in Mumbai"
+User: "Help me find the best location for a townhouse in Mumbai"
 → target_location: "Mumbai"
-→ property_type: "bakery"
+→ property_type: "townhouse"
 
-User: "Where should I open my restaurant in San Francisco's Mission District?"
+User: "Where should I buy an apartment in San Francisco's Mission District?"
 → target_location: "Mission District, San Francisco"
-→ property_type: "restaurant"
+→ property_type: "apartment"
 
 ## Instructions
 1. Extract the geographic location mentioned by the user
-2. Identify the type of property they want to purchase/invest in
-3. Note any additional context or requirements
+2. Identify the type of property they want to purchase/invest in. Property type might not be available, in that case, please use an existing property with best guess and inference to extract the property type. Property type here refers to house, double storey house, apartment with bedroom ad bathroom configuration
+3. Note any additional context or requirementss
 
 If the user doesn't specify a clear location or business type, make a reasonable inference or ask for clarification.
 """

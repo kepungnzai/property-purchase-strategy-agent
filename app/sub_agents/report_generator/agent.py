@@ -34,11 +34,10 @@ McKinsey/BCG-style 7-slide HTML presentation.
 
 ### Step 1: Format the Report Data
 Prepare a comprehensive data summary from the strategic report above, including:
-- Analysis overview (location, business type, date, market validation)
-- Top recommendation details (location, score, opportunity type, strengths, concerns)
-- Competition metrics (total competitors, density, chain dominance, ratings)
+- Analysis overview (location, date, market validation)
+- Top recommendation details ( schools ratings, strengths, concerns)
+- Location metrics (populations, demographics, density, ratings, proximity to amenities score, trains station, highway access)
 - Market characteristics (population, income, infrastructure, foot traffic, rental costs)
-- Alternative locations (name, score, strength, concern, why not top)
 - Next steps (actionable items)
 - Key insights (strategic observations)
 - Methodology summary

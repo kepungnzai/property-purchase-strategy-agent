@@ -33,9 +33,9 @@ Create a compelling infographic that visually summarizes the key findings from t
 ### Step 1: Extract Key Data Points
 From the strategic report, identify:
 - Target location and property type
-- Top recommended location with score
-- Total competitors found
-- Number of zones analyzed
+- Top recommended location with rankings/ratings of schools, supermarket, shopping mall, amenities, train stations, tram, highway access, road access park, university, parks, and other business in the same area
+- Critical analysis of population by age group, income level, infrastructure quality, foot traffic patterns, rental costs
+- Future growths strategic insights and concerns
 - 3-5 key strategic insights
 - Top strengths and concerns
 - Market validation verdict
@@ -53,7 +53,7 @@ TOP RECOMMENDATION:
 Type: [Opportunity Type]
 
 KEY METRICS:
-- Total Competitors: [X]
+- Total Locations of interest: [X]
 - Zones Analyzed: [X]
 - Market Status: [Validated/Cautionary]
 

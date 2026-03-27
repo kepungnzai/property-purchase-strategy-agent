@@ -52,7 +52,7 @@ location_strategy_pipeline = SequentialAgent(
 
 This agent analyzes a target location for a specific property type and produces:
 1. Market research findings from live web data
-2. Competitor mapping from Google Maps Places API
+2. Location mapping from Google Maps Places API
 3. Quantitative gap analysis with zone rankings
 4. Strategic recommendations with structured JSON output
 5. Professional HTML executive report
@@ -79,7 +79,7 @@ including JSON report, HTML report, and infographic image.
 root_agent = Agent(
     model=FAST_MODEL,
     name=APP_NAME,
-    description="A strategic partner for retail property investment/ownership, guiding them to optimal physical locations that foster growth and profitability.",
+    description="A strategic partner for a house property for ownership or investment purposes, guiding them to optimal physical locations that foster growth and profitability.",
     instruction="""Your primary role is to orchestrate the retail location analysis.
 1. Start by greeting the user.
 2. Check if the `TARGET_LOCATION` (Geographic area to analyze (e.g., "Indiranagar, Bangalore")) and `PROPERTY_TYPE` (Type of property (e.g., "new house", "apartment", "townhouse")) have been provided.
