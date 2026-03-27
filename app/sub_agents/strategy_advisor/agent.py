@@ -27,7 +27,7 @@ CURRENT DATE: {current_date}
 {market_research_findings}
 
 ### COMPETITOR ANALYSIS (Part 2A):
-{competitor_analysis}
+{location_analysis}
 
 ### GAP ANALYSIS (Part 2B):
 {gap_analysis}

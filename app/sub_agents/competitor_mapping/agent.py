@@ -88,7 +88,7 @@ competitor_mapping_agent = LlmAgent(
         ),
     ),
     tools=[search_places],
-    output_key="competitor_analysis",
+    output_key="location_analysis",
     before_agent_callback=before_competitor_mapping,
     after_agent_callback=after_competitor_mapping,
 )
