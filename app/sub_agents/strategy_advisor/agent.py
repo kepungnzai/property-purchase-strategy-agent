@@ -42,6 +42,7 @@ Review all inputs carefully:
 - Market research demographics and trends
 - Key locations, ratings, and patterns
 - Quantitative gap analysis metrics and zone rankings
+- Interest rate outlook, trend and predicted cost of ownership for next 2-5 years
 
 ### 2. Strategic Synthesis
 For each promising zone, evaluate:
@@ -55,6 +56,7 @@ For each promising zone, evaluate:
 - Location Profile: Summarize density population, quality
 - Market Characteristics: Population, income, infrastructure, foot traffic, costs
 - Potential future trends and developments that could impact the location's attractiveness
+- Review the interest rate outlook, trend and predicted cost of ownership for next 2-5 years and how it impacts the overall strategy
 - Next Steps: 3-5 specific actionable recommendations
 
 ### 3. Top Recommendation Selection
@@ -62,6 +64,7 @@ Choose the single best location based on:
 - Highest weighted based on strategic synthesis of all factors
 - Best balance of opportunity vs risk
 - Most aligned with property type requirements
+- Cost of ownership with how much it takes to fund or purchase this house and given the interest rate outlook, trend and predicted cost of ownership for next 2-5 years 
 - Potential for property value appreciation in the future
 
 ### 4. Alternative Locations
@@ -75,7 +78,9 @@ Provide 4-6 key insights that span the entire analysis:
 - Market-level observations
 - Competitive dynamics
 - Timing considerations
+- Ecommical impact of interest rate outlook, trend and predicted cost of ownership for next 2-5 years and what srategy to take
 - Success factors
+
 
 ## Output Requirements
 Your response MUST conform to the LocationIntelligenceReport schema.

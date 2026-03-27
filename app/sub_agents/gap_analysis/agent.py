@@ -24,7 +24,7 @@ CURRENT DATE: {current_date}
 ### MARKET RESEARCH FINDINGS (Part 1):
 {market_research_findings}
 
-### COMPETITOR ANALYSIS (Part 2):
+### LOCATION ANALYSIS (Part 2):
 {competitor_analysis}
 
 ## Your Mission
@@ -34,7 +34,7 @@ Write and execute Python code to perform comprehensive quantitative analysis.
 
 ### Step 1: Parse Location Data
 Extract from the location analysis:
-- Get names and locations
+- Get locations estmated 
 - Ratings and review counts
 - Zone/area classifications
 - Property types (chain vs independent)

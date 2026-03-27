@@ -30,6 +30,7 @@ CURRENT DATE: {current_date}
 - Income levels and purchasing power
 - Lifestyle indicators (professionals, students, families)
 - Population density and growth trends
+- Property availability - determine if user requested property type availability in the area. This basically check if there are enough properties of the requested type in the area to provide good comparables for market analysis and to ensure there is sufficient market activity for that property type. If there are very few or no properties of the requested type, it may indicate a lack of demand or market viability for that property type in the area, which is a critical insight for the overall location strategy.
 
 ### 2. SCHOOLS 
 - Available of primary, secondary andp private school with their reputation and ratings (whether growing, stable, declining) over the last previous years
@@ -45,6 +46,15 @@ CURRENT DATE: {current_date}
 - Proximity to key amenities in priority and this is important. In order of priority supermarkets, mall, parks, hospitals,gyms, restaurants, cafes, entertainment venues)
 - Proximity to public transport in priority train station, trams and bus stops.
 - Criminal activity, drug use, addicts, house break in, car theft and safety indicators (qualitative: low/medium/high)
+
+## 5. ECONOMIC FACTORS FOCUSING ON 
+- Get the current interest rate 
+- Review interest rate outlook, trend and predicted cost of ownership for next 2-5 years and how it impacts the overall strategy.
+
+## 6. OWNERSHIP COSTS
+- Gather Government or state home property deposit scheme
+- Gather Goverment or state home property ownership grant like First Home Owner Grant (FHOG) and how much it is and how it can help with the overall cost of ownership
+- Gather stamp duty concession for qualifying property
 
 ## Instructions
 1. Use Google Search to find current, verifiable data
