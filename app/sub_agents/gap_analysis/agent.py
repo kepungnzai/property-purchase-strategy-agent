@@ -32,9 +32,9 @@ Write and execute Python code to perform comprehensive quantitative analysis.
 
 ## Analysis Steps
 
-### Step 1: Parse Competitor Data
-Extract from the competitor analysis:
-- Competitor names and locations
+### Step 1: Parse Location Data
+Extract from the location analysis:
+- Get names and locations
 - Ratings and review counts
 - Zone/area classifications
 - Property types (chain vs independent)
@@ -50,38 +50,50 @@ From the market research:
 For each identified zone, compute:
 
 **Basic Metrics:**
-- Competitor count
-- Competitor density (per estimated area)
-- Average competitor rating
-- Total review volume
+- property affordability score based on average property prices, square footage, no of bedrooms and bathrooms 
+- school nearby by ratings from 1 to 5 (1 being the lowest and 5 being the highest)
+- internet connectivity score from 1 to 5 (1 being the lowest and 5 being the highest)
+- eletricity reliability score from 1 to 5 (1 being the lowest and 5 being the highest)
+- potential high bushfire risk from 1 to 5 (1 being the lowest and 5 being the highest)
+- potential high flood risk from 1 to 5 (1 being the lowest and 5 being the highest)
+- proximity to cbd by rating from 1 to 5 (1 being the lowest and 5 being the highest)
+- categorized anemity ratings (supermarkets, malls, parks, hospitals, gyms, restaurants, cafes, entertainment venues) from 1 to 5 (1 being the lowest and 5 being the highest)
+- transport access score (proximity to train station, trams and bus stops) from 1 to 5 (1 being the lowest and 5 being the highest)
+- average crime rate and safety indicators from 1 to 5 (1 being the lowest and 5 being the highest)
+- Total score for each zone basic metric based on the above factors
 
 **Quality Metrics:**
-- Competition Quality Score: Weighted by ratings (4.5+ = high threat)
-- Chain Dominance Ratio: % of chain/franchise competitors
+- school reputation nationally from 1 to 5 (1 being the lowest and 5 being the highest)
 - High Performer Count: Number of 4.5+ rated competitors
+- Park and recreation Score: Based on proximity and quality of parks
+- Hospital Access Score: Based on proximity and quality of hospitals
+- Gym and fitness Score: Based on proximity and quality of gyms
+- Restaurant and cafe Score: Based on proximity and quality of restaurants and cafes
+- Entertainment Score: Based on proximity and quality of entertainment venues
+- Beach Access Score: Based on proximity and quality of beach access
 
 **Opportunity Metrics:**
-- Demand Signal: Based on population, income, infrastructure
-- Market Saturation Index: (Competitors * Quality) / Demand
-- Viability Score: Multi-factor weighted score
+- Potential rise in property values
+- Surrounding property investment trends
+- Affordability relative to risk
 
 ### Step 4: Zone Categorization
 Classify each zone as:
-- **SATURATED**: High competition, low opportunity
-- **MODERATE**: Balanced market, moderate opportunity
-- **OPPORTUNITY**: Low competition, high potential
+- **EXCELLENT**: High basic metric, high quality metrics and high opportunity metrics
+- **MODERATE**: Balanced basic metric, Balanced quality metrics and Balanced opportunity metrics
+- **LOW**: Low basic metric, Low quality metrics and Low opportunity metrics
 
 Also assign:
-- Risk Level: Low / Medium / High
-- Investment Tier: Based on expected costs
-- Best Customer Segment: Target demographic
+- Risk Level (property investment ROI vs risk): Low / Medium / High
+- Investment Tier: Based on expected costs of ownership
 
 ### Step 5: Rank Top Zones
 Create a weighted ranking considering:
-- Low market saturation (weight: 30%)
-- High demand signals (weight: 30%)
+- Reputable school (weight: 30%)
+- Proximity to amenities (weight: 20%)
+- Close to train station (weight: 15%)
 - Low chain dominance (weight: 15%)
-- Infrastructure quality (weight: 15%)
+- Infrastructure quality (weight: 10%)
 - Manageable costs (weight: 10%)
 
 ### Step 6: Output Tables
