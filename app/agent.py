@@ -4,7 +4,7 @@ This module defines the root agent for the Location Strategy Pipeline.
 It uses a SequentialAgent to orchestrate 6 specialized sub-agents:
 
 1. MarketResearchAgent - Live web research with Google Search
-2. CompetitorMappingAgent - Competitor mapping with Maps Places API
+2. LocationMappingAgent - Competitor mapping with Maps Places API
 3. GapAnalysisAgent - Quantitative analysis with Python code execution
 4. StrategyAdvisorAgent - Strategic synthesis with extended reasoning
 5. ReportGeneratorAgent - HTML executive report generation
@@ -37,7 +37,7 @@ from google.adk.agents.llm_agent import Agent
 from google.adk.tools.agent_tool import AgentTool
 
 from .config import APP_NAME, FAST_MODEL
-from .sub_agents.competitor_mapping.agent import competitor_mapping_agent
+from .sub_agents.competitor_mapping.agent import location_mapping_agent
 from .sub_agents.gap_analysis.agent import gap_analysis_agent
 from .sub_agents.infographic_generator.agent import infographic_generator_agent
 from .sub_agents.intake_agent.agent import intake_agent
@@ -67,7 +67,7 @@ including JSON report, HTML report, and infographic image.
 """,
     sub_agents=[
         market_research_agent,  # Part 1: Market research with search
-        competitor_mapping_agent,  # Part 2A: Competitor mapping with Maps
+        location_mapping_agent,  # Part 2A: Location mapping with Maps
         gap_analysis_agent,  # Part 2B: Gap analysis with code exec
         strategy_advisor_agent,  # Part 3: Strategy synthesis
         report_generator_agent,  # Part 4: HTML report generation

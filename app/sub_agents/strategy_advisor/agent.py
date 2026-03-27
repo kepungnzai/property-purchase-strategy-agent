@@ -77,10 +77,10 @@ Identify 2-3 alternative locations:
 Provide 4-6 key insights that span the entire analysis:
 - Market-level observations
 - Competitive dynamics
-- Timing considerations
+- Timing considerations taking into account property trend (up or down) and economic factors (like interest rate and others factor)
 - Ecommical impact of interest rate outlook, trend and predicted cost of ownership for next 2-5 years and what srategy to take
 - Success factors
-
+- Calculated risks and mitigations
 
 ## Output Requirements
 Your response MUST conform to the LocationIntelligenceReport schema.

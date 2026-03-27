@@ -43,7 +43,7 @@ An AI pipeline that unifies these disparate data sources into a coherent strateg
 
 - **7 Specialized Agents**: Each agent focuses on a specific task in the analysis pipeline
 - **Real-time Web Search**: MarketResearchAgent uses Google Search for live market data
-- **Google Maps Integration**: CompetitorMappingAgent uses Places API for real competitor data
+- **Google Maps Integration**: LocationMappingAgent uses Places API for real competitor data
 - **Python Code Execution**: GapAnalysisAgent runs pandas code for quantitative analysis
 - **Extended Reasoning**: StrategyAdvisorAgent uses thinking mode for deep strategic synthesis
 - **Structured Output**: Pydantic schemas ensure consistent, parseable JSON output
@@ -68,7 +68,7 @@ flowchart TB
         direction TB
         A0["IntakeAgent<br/>Parse Request"]
         A1["MarketResearchAgent<br/>Google Search Tool"]
-        A2["CompetitorMappingAgent<br/>Google Maps Places API"]
+        A2["LocationMappingAgent<br/>Google Maps Places API"]
         A3["GapAnalysisAgent<br/>Python Code Execution"]
         A4["StrategyAdvisorAgent<br/>Extended Reasoning + Pydantic Schema"]
         A5["ReportGeneratorAgent<br/>HTML Report Tool"]
@@ -106,7 +106,7 @@ Each agent reads from and writes to the shared session state:
 User Input
     → IntakeAgent extracts: target_location, property_type
     → MarketResearchAgent produces: market_research_findings
-    → CompetitorMappingAgent produces: competitor_analysis
+    → LocationMappingAgent produces: competitor_analysis
     → GapAnalysisAgent produces: gap_analysis
     → StrategyAdvisorAgent produces: strategic_report (Pydantic model)
     → ReportGeneratorAgent produces: html_report
@@ -190,7 +190,7 @@ retail-ai-location-strategy/
 |-------|---------|-------|-------------|--------------|
 | **IntakeAgent** | Parse user request | FAST_MODEL | Extracts location and business type from natural language | `target_location`, `property_type` |
 | **MarketResearchAgent** | Live web research | FAST_MODEL | Uses `google_search` built-in tool | `market_research_findings` |
-| **CompetitorMappingAgent** | Find competitors | FAST_MODEL | Custom `search_places` tool with Maps API | `competitor_analysis` |
+| **LocationMappingAgent** | Find competitors | FAST_MODEL | Custom `search_places` tool with Maps API | `competitor_analysis` |
 | **GapAnalysisAgent** | Quantitative analysis | CODE_EXEC_MODEL | `BuiltInCodeExecutor` for pandas analysis | `gap_analysis` |
 | **StrategyAdvisorAgent** | Strategic synthesis | PRO_MODEL | Extended reasoning + Pydantic `output_schema` | `strategic_report` |
 | **ReportGeneratorAgent** | HTML report | FAST_MODEL | `generate_html_report` tool | `html_report` |
@@ -383,7 +383,7 @@ The `notebook/` folder contains the original Gemini 3 implementation that inspir
 | Part | Description | ADK Equivalent |
 |------|-------------|----------------|
 | **Part 1** | Market Research with Google Search | MarketResearchAgent |
-| **Part 2A** | Competitor Mapping with Maps API | CompetitorMappingAgent |
+| **Part 2A** | Competitor Mapping with Maps API | LocationMappingAgent |
 | **Part 2B** | Gap Analysis with Code Execution | GapAnalysisAgent |
 | **Part 3** | Strategy Synthesis with Extended Reasoning | StrategyAdvisorAgent |
 | **Part 4** | HTML Report Generation | ReportGeneratorAgent |

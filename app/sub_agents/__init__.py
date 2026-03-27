@@ -17,14 +17,14 @@
 This module exports all specialized agents that form the pipeline:
 0. IntakeAgent - Parses user request to extract location and business type
 1. MarketResearchAgent - Live web research with Google Search
-2. CompetitorMappingAgent - Competitor mapping with Maps API
+2. LocationMappingAgent - Location mapping with Maps API
 3. GapAnalysisAgent - Quantitative analysis with code execution
 4. StrategyAdvisorAgent - Strategic synthesis with extended reasoning
 5. ReportGeneratorAgent - HTML report generation
 6. InfographicGeneratorAgent - Visual infographic generation
 """
 
-from .competitor_mapping import competitor_mapping_agent
+from .competitor_mapping import location_mapping_agent
 from .gap_analysis import gap_analysis_agent
 from .infographic_generator import infographic_generator_agent
 from .intake_agent import intake_agent

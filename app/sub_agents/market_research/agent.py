@@ -35,11 +35,15 @@ CURRENT DATE: {current_date}
 ### 2. SCHOOLS 
 - Available of primary, secondary andp private school with their reputation and ratings (whether growing, stable, declining) over the last previous years
 
-### 3. RESIDENTIAL GROWTH
+### 3. RESIDENTIAL
 - New residential and commercial developments (apartments, offices, malls)
 - Walkability and neighborhood vibe (lay back vs bustling vs upcoming)
 - Infrastructure improvements (metro, roads, tech parks)
 - What is the trend of property around this area and future outlook for the next 5 years
+- Is the surrounding area within short distance away from the property location 
+- Is the property located in an area with high flood risk?
+- Is the property located in an area with high fire risk?
+- Is there area geographically flat or sloped?
 
 ## 4. LOCATION ATTRACTIVENESS
 - Road and highway connectivity (proximity to major roads, highways, congestions and availability of toll which is a big no)
@@ -49,11 +53,11 @@ CURRENT DATE: {current_date}
 
 ## 5. ECONOMIC FACTORS FOCUSING ON 
 - Get the current interest rate 
-- Review interest rate outlook, trend and predicted cost of ownership for next 2-5 years and how it impacts the overall strategy.
+- Review interest rate outlook, trend (going upwards or downwards) and predicted cost of ownership for next 2-5 years and how it impacts the overall strategy.
 
 ## 6. OWNERSHIP COSTS
-- Gather Government or state home property deposit scheme
-- Gather Goverment or state home property ownership grant like First Home Owner Grant (FHOG) and how much it is and how it can help with the overall cost of ownership
+- Gather Government or state home property deposit scheme. Assume these options are available for the user and gather information on how much it is and how it can help with the overall cost of ownership
+- Gather Goverment or state home property ownership grant like First Home Owner Grant (FHOG) and how much it is and how it can help with the overall cost of ownership. Assume these options are available for the user and gather information on how much it is and how it can help with the overall cost of ownership
 - Gather stamp duty concession for qualifying property
 
 ## Instructions

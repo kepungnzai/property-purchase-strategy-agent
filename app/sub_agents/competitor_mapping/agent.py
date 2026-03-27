@@ -31,15 +31,14 @@ For each location found, note:
 - Location type
 - Location/address
 - Rating (out of 5)
-- Number of reviews
+- Number of reviews if any
 - Business status (operational, etc.)
 
 ## Step 3: Identify Patterns
-Analyze the property and its surroundings landscape:
+It is important to note distance from CBD  Analyze the property and its surroundings landscape:
 
 ### Geographic Clustering
-- It is important to highlight distance from CBD 
-- Are these locations clustered in specific areas/zones? Important point to highlight
+- Are these locations clustered in specific areas/zones? This give an idea how easy it is to get to amenities to amenities. Important point to highlight
 - Which areas have high concentration vs sparse presence?
 - Are there any "dead zones" with no tenant staying in the property? (Optional) 
 
@@ -58,10 +57,6 @@ Analyze the property and its surroundings landscape:
 Provide insights on:
 - Is the property available in the {target_location} ? If not, specify what options are available in the surrounding areas and how far they are from the target location. This is important because if the requested property type is not available in the target location, it may indicate a lack of demand or market viability for that property type in the area, which is a critical insight for the overall location strategy. If there are options available in the surrounding areas, it is important to specify how far they are from the target location to help assess their relevance and potential impact on the location strategy.
 - Potential for opening of new good schools, supermarket, shopping mall, amenities, train stations, tram, bus, highway access, road access park, university, parks, shopping mall and other business in the same area near the target location?
-- Is the surrounding area within short distance away from the property location 
-- Is the property located in an area with high flood risk?
-- Is the property located in an area with high fire risk?
-- Is there area geographically flat or sloped?
 
 ## Output Format
 Provide a detailed location map with:
@@ -74,8 +69,8 @@ Provide a detailed location map with:
 Be specific and reference the actual data you receive from the search_places tool.
 """
 
-competitor_mapping_agent = LlmAgent(
-    name="CompetitorMappingAgent",
+location_mapping_agent = LlmAgent(
+    name="LocationMappingAgent",
     model=FAST_MODEL,
     description="Maps target property using Google Maps Places API for ground-truth location and surroundings data",
     instruction=COMPETITOR_MAPPING_INSTRUCTION,
