@@ -1,18 +1,4 @@
-# Copyright 2025 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-"""Retail Location Strategy Agent - Root Agent Definition.
+"""Property Location Strategy Agent - Root Agent Definition.
 
 This module defines the root agent for the Location Strategy Pipeline.
 It uses a SequentialAgent to orchestrate 6 specialized sub-agents:
@@ -36,12 +22,12 @@ Authentication:
         MAPS_API_KEY=your_maps_api_key
 
 Usage:
-    Run with: adk web retail_ai_location_strategy_adk
+    Run with: adk web property_ai_location_strategy_adk
 
     The agent expects initial state variables:
     - target_location: The geographic area to analyze (e.g., "Bangalore, India")
-    - business_type: Type of business to open (e.g., "coffee shop")
-
+    - property_type: Type of property to purchase/invest in (e.g., "standalone house, 4 bedroom house apartment, townhouse")
+    
     Optional state variables:
     - maps_api_key: Google Maps API key for Places search
 """
@@ -64,7 +50,7 @@ location_strategy_pipeline = SequentialAgent(
     name="LocationStrategyPipeline",
     description="""Comprehensive retail location strategy analysis pipeline.
 
-This agent analyzes a target location for a specific business type and produces:
+This agent analyzes a target location for a specific property type and produces:
 1. Market research findings from live web data
 2. Competitor mapping from Google Maps Places API
 3. Quantitative gap analysis with zone rankings
@@ -74,7 +60,7 @@ This agent analyzes a target location for a specific business type and produces:
 
 To use, get the following details:
 - target_location: {target_location}
-- business_type: {business_type}
+- property_type: {property_type}
 
 The analysis runs automatically through all stages and produces artifacts
 including JSON report, HTML report, and infographic image.
@@ -93,10 +79,10 @@ including JSON report, HTML report, and infographic image.
 root_agent = Agent(
     model=FAST_MODEL,
     name=APP_NAME,
-    description="A strategic partner for retail businesses, guiding them to optimal physical locations that foster growth and profitability.",
+    description="A strategic partner for retail property investment/ownership, guiding them to optimal physical locations that foster growth and profitability.",
     instruction="""Your primary role is to orchestrate the retail location analysis.
 1. Start by greeting the user.
-2. Check if the `TARGET_LOCATION` (Geographic area to analyze (e.g., "Indiranagar, Bangalore")) and `BUSINESS_TYPE` (Type of business (e.g., "coffee shop", "bakery", "gym")) have been provided.
+2. Check if the `TARGET_LOCATION` (Geographic area to analyze (e.g., "Indiranagar, Bangalore")) and `PROPERTY_TYPE` (Type of property (e.g., "new house", "apartment", "townhouse")) have been provided.
 3. If they are missing, **ask the user clarifying questions to get the required information.**
 4. Once you have the necessary details, call the `IntakeAgent` tool to process them.
 5. After the `IntakeAgent` is successful, delegate the full analysis to the `LocationStrategyPipeline`.

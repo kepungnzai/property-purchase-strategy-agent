@@ -132,7 +132,7 @@ export function PipelineTimeline({
             </div>
             <div>
               <h2 className="text-xl font-semibold text-gray-900 capitalize">
-                {state.business_type || "Business"}
+                {state.property_type || "Business"}
               </h2>
               <p className="text-gray-600">{state.target_location || "Location"}</p>
             </div>

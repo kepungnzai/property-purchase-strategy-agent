@@ -1,21 +1,7 @@
-# Copyright 2025 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
-"""Intake Agent - Extracts target location and business type from user request.
+"""Intake Agent - Extracts target location and property type from user request.
 
 This agent parses the user's natural language request and extracts the
-required parameters (target_location, business_type) into session state
+required parameters (target_location, property_type) into session state
 for use by subsequent agents in the pipeline.
 """
 
@@ -33,7 +19,7 @@ class UserRequest(BaseModel):
     target_location: str = Field(
         description="The geographic location/area to analyze (e.g., 'Indiranagar, Bangalore', 'Manhattan, New York')"
     )
-    business_type: str = Field(
+    property_type: str = Field(
         description="The type of business the user wants to open (e.g., 'coffee shop', 'bakery', 'gym', 'restaurant')"
     )
     additional_context: str | None = Field(
@@ -51,8 +37,8 @@ def after_intake(callback_context: CallbackContext) -> types.Content | None:
         callback_context.state["target_location"] = parsed.get(
             "target_location", ""
         )
-        callback_context.state["business_type"] = parsed.get(
-            "business_type", ""
+        callback_context.state["property_type"] = parsed.get(
+            "property_type", ""
         )
         callback_context.state["additional_context"] = parsed.get(
             "additional_context", ""
@@ -60,7 +46,7 @@ def after_intake(callback_context: CallbackContext) -> types.Content | None:
     elif hasattr(parsed, "target_location"):
         # Handle Pydantic model
         callback_context.state["target_location"] = parsed.target_location
-        callback_context.state["business_type"] = parsed.business_type
+        callback_context.state["property_type"] = parsed.property_type
         callback_context.state["additional_context"] = (
             parsed.additional_context or ""
         )
@@ -82,23 +68,23 @@ Your task is to extract the target location and business type from the user's re
 
 User: "I want to open a coffee shop in Indiranagar, Bangalore"
 → target_location: "Indiranagar, Bangalore"
-→ business_type: "coffee shop"
+→ property_type: "coffee shop"
 
 User: "Analyze the market for a new gym in downtown Seattle"
 → target_location: "downtown Seattle"
-→ business_type: "gym"
+→ property_type: "gym"
 
 User: "Help me find the best location for a bakery in Mumbai"
 → target_location: "Mumbai"
-→ business_type: "bakery"
+→ property_type: "bakery"
 
 User: "Where should I open my restaurant in San Francisco's Mission District?"
 → target_location: "Mission District, San Francisco"
-→ business_type: "restaurant"
+→ property_type: "restaurant"
 
 ## Instructions
 1. Extract the geographic location mentioned by the user
-2. Identify the type of business they want to open
+2. Identify the type of property they want to purchase/invest in
 3. Note any additional context or requirements
 
 If the user doesn't specify a clear location or business type, make a reasonable inference or ask for clarification.
@@ -107,7 +93,7 @@ If the user doesn't specify a clear location or business type, make a reasonable
 intake_agent = LlmAgent(
     name="IntakeAgent",
     model=FAST_MODEL,
-    description="Parses user request to extract target location and business type",
+    description="Parses user request to extract target location and property type",
     instruction=INTAKE_INSTRUCTION,
     generate_content_config=types.GenerateContentConfig(
         http_options=types.HttpOptions(

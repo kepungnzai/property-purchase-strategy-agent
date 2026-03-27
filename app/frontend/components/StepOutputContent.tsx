@@ -21,7 +21,7 @@ export function StepOutputContent({ stepId, state }: StepOutputContentProps) {
     case "intake":
       return (
         <p className="text-gray-600 text-sm">
-          Analyzing <span className="font-medium text-gray-900">{state.business_type}</span> locations in{" "}
+          Analyzing <span className="font-medium text-gray-900">{state.property_type}</span> locations in{" "}
           <span className="font-medium text-gray-900">{state.target_location}</span>
           {state.additional_context && (
             <span className="text-gray-500 ml-1">({state.additional_context})</span>

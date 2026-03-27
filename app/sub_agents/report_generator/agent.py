@@ -1,17 +1,3 @@
-# Copyright 2025 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 """Report Generator Agent - Part 4 of the Location Strategy Pipeline.
 
 This agent generates a professional HTML executive report from the
@@ -34,7 +20,7 @@ REPORT_GENERATOR_INSTRUCTION = """You are an executive report generator for loca
 Your task is to create a professional HTML executive report using the generate_html_report tool.
 
 TARGET LOCATION: {target_location}
-BUSINESS TYPE: {business_type}
+PROPERTY TYPE: {property_type}
 CURRENT DATE: {current_date}
 
 ## Strategic Report Data

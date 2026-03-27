@@ -153,7 +153,7 @@ The ADK agent's state is automatically synchronized with the frontend through AG
 | `pipeline_stage` | before_* callbacks | PipelineTimeline |
 | `stages_completed` | after_* callbacks | PipelineTimeline |
 | `target_location` | IntakeAgent | Header card |
-| `business_type` | IntakeAgent | Header card |
+| `property_type` | IntakeAgent | Header card |
 | `market_research_findings` | MarketResearchAgent | ScrollableMarkdown |
 | `gap_analysis` | GapAnalysisAgent | TabbedGapAnalysis |
 | `strategic_report` | StrategyAdvisorAgent | LocationReport, CompetitorCard, MarketCard |

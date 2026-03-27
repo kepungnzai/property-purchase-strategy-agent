@@ -79,7 +79,7 @@ flowchart TB
 
     subgraph State["Session State"]
         S1["target_location"]
-        S2["business_type"]
+        S2["property_type"]
         S3["market_research_findings"]
         S4["competitor_analysis"]
         S5["gap_analysis"]
@@ -104,7 +104,7 @@ Each agent reads from and writes to the shared session state:
 
 ```
 User Input
-    → IntakeAgent extracts: target_location, business_type
+    → IntakeAgent extracts: target_location, property_type
     → MarketResearchAgent produces: market_research_findings
     → CompetitorMappingAgent produces: competitor_analysis
     → GapAnalysisAgent produces: gap_analysis
@@ -122,7 +122,7 @@ Agents communicate through the shared session state using the `output_key` param
 market_research_agent = LlmAgent(
     name="MarketResearchAgent",
     model=FAST_MODEL,
-    instruction="Research {target_location} for {business_type}...",
+    instruction="Research {target_location} for {property_type}...",
     output_key="market_research_findings",  # Saves output to state
 )
 ```
@@ -188,7 +188,7 @@ retail-ai-location-strategy/
 
 | Agent | Purpose | Model | Key Feature | State Output |
 |-------|---------|-------|-------------|--------------|
-| **IntakeAgent** | Parse user request | FAST_MODEL | Extracts location and business type from natural language | `target_location`, `business_type` |
+| **IntakeAgent** | Parse user request | FAST_MODEL | Extracts location and business type from natural language | `target_location`, `property_type` |
 | **MarketResearchAgent** | Live web research | FAST_MODEL | Uses `google_search` built-in tool | `market_research_findings` |
 | **CompetitorMappingAgent** | Find competitors | FAST_MODEL | Custom `search_places` tool with Maps API | `competitor_analysis` |
 | **GapAnalysisAgent** | Quantitative analysis | CODE_EXEC_MODEL | `BuiltInCodeExecutor` for pandas analysis | `gap_analysis` |
@@ -271,7 +271,7 @@ The `StrategyAdvisorAgent` outputs a structured `LocationIntelligenceReport` usi
 ```python
 class LocationIntelligenceReport(BaseModel):
     target_location: str
-    business_type: str
+    property_type: str
     analysis_date: str
     market_validation: str
     total_competitors_found: int

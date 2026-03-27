@@ -1,17 +1,3 @@
-# Copyright 2025 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 """Infographic Generator Agent - Part 5 (Bonus) of the Location Strategy Pipeline.
 
 This agent creates a visual infographic summary using Gemini's image generation
@@ -33,7 +19,7 @@ INFOGRAPHIC_GENERATOR_INSTRUCTION = """You are a data visualization specialist c
 Your task is to generate a visual infographic summarizing the location intelligence analysis.
 
 TARGET LOCATION: {target_location}
-BUSINESS TYPE: {business_type}
+PROPERTY TYPE: {property_type}
 CURRENT DATE: {current_date}
 
 ## Strategic Report Data
@@ -46,7 +32,7 @@ Create a compelling infographic that visually summarizes the key findings from t
 
 ### Step 1: Extract Key Data Points
 From the strategic report, identify:
-- Target location and business type
+- Target location and property type
 - Top recommended location with score
 - Total competitors found
 - Number of zones analyzed
@@ -59,7 +45,7 @@ Compose a concise data summary suitable for visualization:
 
 **FORMAT YOUR SUMMARY AS:**
 
-LOCATION INTELLIGENCE REPORT: [Business Type] in [Target Location]
+LOCATION INTELLIGENCE REPORT: [Property Type] in [Target Location]
 Analysis Date: [Date]
 
 TOP RECOMMENDATION:

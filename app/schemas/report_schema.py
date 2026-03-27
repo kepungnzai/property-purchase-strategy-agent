@@ -133,7 +133,7 @@ class LocationIntelligenceReport(BaseModel):
     target_location: str = Field(
         description="The target location being analyzed"
     )
-    business_type: str = Field(description="The type of business being planned")
+    property_type: str = Field(description="The type of property being planned")
     analysis_date: str = Field(description="Date of the analysis")
     market_validation: str = Field(
         description="Overall market validation summary"

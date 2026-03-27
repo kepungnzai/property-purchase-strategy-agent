@@ -53,7 +53,7 @@ def before_market_research(
         f"  Target Location: {callback_context.state.get('target_location', 'Not set')}"
     )
     logger.info(
-        f"  Business Type: {callback_context.state.get('business_type', 'Not set')}"
+        f"  Property Type: {callback_context.state.get('property_type', 'Not set')}"
     )
     logger.info("=" * 60)
 

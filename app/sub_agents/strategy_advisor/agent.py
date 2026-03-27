@@ -1,17 +1,3 @@
-# Copyright 2025 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 """Strategy Advisor Agent - Part 3 of the Location Strategy Pipeline.
 
 This agent synthesizes all findings into actionable recommendations using
@@ -32,7 +18,7 @@ STRATEGY_ADVISOR_INSTRUCTION = """You are a senior strategy consultant synthesiz
 Your task is to analyze all research and provide actionable strategic recommendations.
 
 TARGET LOCATION: {target_location}
-BUSINESS TYPE: {business_type}
+PROPERTY TYPE: {property_type}
 CURRENT DATE: {current_date}
 
 ## Available Data
@@ -72,7 +58,7 @@ For each promising zone, evaluate:
 Choose the single best location based on:
 - Highest weighted opportunity score
 - Best balance of opportunity vs risk
-- Most aligned with business type requirements
+- Most aligned with property type requirements
 - Clear competitive advantage potential
 
 ### 4. Alternative Locations
