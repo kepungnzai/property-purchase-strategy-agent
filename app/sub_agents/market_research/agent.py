@@ -30,13 +30,13 @@ CURRENT DATE: {current_date}
 - Income levels and purchasing power
 - Lifestyle indicators (professionals, students, families)
 - Population density and growth trends
-- Property availability - determine if user requested property type availability in the area. This basically check if there are enough properties of the requested type in the area to provide good comparables for market analysis and to ensure there is sufficient market activity for that property type. If there are very few or no properties of the requested type, it may indicate a lack of demand or market viability for that property type in the area, which is a critical insight for the overall location strategy.
 
 ### 2. SCHOOLS 
-- Available of primary, secondary andp private school with their reputation and ratings (whether growing, stable, declining) over the last previous years
+- Available of primary, secondary andp private school with their reputation and ratings (whether growing, stable, declining) over the last previous  and take note of the distance
 
 ### 3. RESIDENTIAL
-- New residential and commercial developments (apartments, offices, malls)
+- Property availability - determine if user requested property type availability in the area. This basically check if there are enough properties of the requested type in the area to provide good comparables for market analysis and to ensure there is sufficient market activity for that property type. If there are very few or no properties of the requested type, it may indicate a lack of demand or market viability for that property type in the area, which is a critical insight for the overall location strategy. One of the better way to check is to find out the best property site for example, in Australia it is www.realestate.com.au or in new zealand it is trademe.co.nz and search for the specific property type in the target location and see how many listings are available. If there are very few or no listings, it may indicate a lack of market viability for that property type in the area, hence assume user would go for older home or existing build.
+- New residential and commercial developments (apartments, offices, malls). Look for new housing build first. If it is not available. Then suggest new development even though it is further away from the area within 10-20km. If there's no such property, then assume user would go for existig build (older home) 
 - Walkability and neighborhood vibe (lay back vs bustling vs upcoming)
 - Infrastructure improvements (metro, roads, tech parks)
 - What is the trend of property around this area and future outlook for the next 5 years
@@ -47,11 +47,11 @@ CURRENT DATE: {current_date}
 
 ## 4. LOCATION ATTRACTIVENESS
 - Road and highway connectivity (proximity to major roads, highways, congestions and availability of toll which is a big no)
-- Proximity to key amenities in priority and this is important. In order of priority supermarkets, mall, parks, hospitals,gyms, restaurants, cafes, entertainment venues)
+- Proximity to key amenities in priority and this is important. In order of priority supermarkets, mall, parks, hospitals,gyms, restaurants, cafes, entertainment venues) and try to note down the distance from selected property location to these amenities.
 - Proximity to public transport in priority train station, trams and bus stops.
 - Criminal activity, drug use, addicts, house break in, car theft and safety indicators (qualitative: low/medium/high)
 
-## 5. ECONOMIC FACTORS FOCUSING ON 
+## 5. ECONOMIC FACTORS WITH FOCUS ON 
 - Get the current interest rate 
 - Review interest rate outlook, trend (going upwards or downwards) and predicted cost of ownership for next 2-5 years and how it impacts the overall strategy.
 
