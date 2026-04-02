@@ -51,8 +51,8 @@ jobs:
       #     create_credentials_file: true
       #     project_id: ${{ vars.CICD_PROJECT_ID }}
 
-      # - name: Set up Docker Buildx
-      #   uses: docker/setup-buildx-action@v3
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
       # - name: Configure Docker for Artifact Registry
       #   run: |
@@ -63,14 +63,14 @@ jobs:
         with:
           context: .
           file: ./Dockerfile.staging
-          push: true
+          push: false
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-          cache-from: type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache
-          cache-to: type=registry,ref=${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:buildcache,mode=max
-          build-args: |
-            COMMIT_SHA=${{ github.sha }}
+          # cache-from: type=gha
+          # cache-to: type=gha,mode=max
+          # build-args: |
+          #   COMMIT_SHA=${{ github.sha }}
 
       - name: Output Image Details
         run: |
