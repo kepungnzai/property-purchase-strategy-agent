@@ -41,21 +41,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - id: 'auth'
-        name: 'Authenticate to Google Cloud'
-        uses: 'google-github-actions/auth@v2'
-        with:
-          workload_identity_provider: 'projects/${{ vars.GCP_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ secrets.WIF_POOL_ID }}/providers/${{ secrets.WIF_PROVIDER_ID }}'
-          service_account: '${{ secrets.GCP_SERVICE_ACCOUNT }}'
-          create_credentials_file: true
-          project_id: ${{ vars.CICD_PROJECT_ID }}
+      # - id: 'auth'
+      #   name: 'Authenticate to Google Cloud'
+      #   uses: 'google-github-actions/auth@v2'
+      #   with:
+      #     workload_identity_provider: 'projects/${{ vars.GCP_PROJECT_NUMBER }}/locations/global/workloadIdentityPools/${{ secrets.WIF_POOL_ID }}/providers/${{ secrets.WIF_PROVIDER_ID }}'
+      #     service_account: '${{ secrets.GCP_SERVICE_ACCOUNT }}'
+      #     create_credentials_file: true
+      #     project_id: ${{ vars.CICD_PROJECT_ID }}
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+      # - name: Set up Docker Buildx
+      #   uses: docker/setup-buildx-action@v3
 
-      - name: Configure Docker for Artifact Registry
-        run: |
-          gcloud auth configure-docker ${{ env.REGISTRY }} --quiet
+      # - name: Configure Docker for Artifact Registry
+      #   run: |
+      #     gcloud auth configure-docker ${{ env.REGISTRY }} --quiet
 
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
