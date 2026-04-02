@@ -25,6 +25,7 @@ on:
       - 'deployment/**'
       - 'uv.lock'
       - 'Dockerfile.staging'
+  workflow_dispatch:
 
 env:
   REGISTRY: us-central1-docker.pkg.dev
