@@ -1,10 +1,9 @@
 [project]
-name = "retail-ai-location-strategy"
+name = "property-location-strategy"
 version = "1.0.0"
 description = "Multi-agent AI pipeline for retail site selection using Google ADK"
 authors = [
-    {name = "Lavi Nigam", email = "lavinigam@google.com"},
-    {name = "Deepak Moonat", email = "dmoonat@google.com"},
+    {name = "Jeremy Woo", email = "kepung@gmail.com"}
 ]
 license = {text = "Apache License 2.0"}
 readme = "README.md"
@@ -38,7 +37,7 @@ extend = "../../../pyproject.toml"
 
 [tool.ruff.lint.isort]
 # Categorizes the local package for correct import sorting
-known-first-party = ["app", "retail_ai_location_strategy"]
+known-first-party = ["app", "property_location_strategy"]
 
 [tool.mypy]
 disallow_untyped_calls = true

@@ -93,4 +93,4 @@ RETRY_ATTEMPTS = 5  # More attempts for transient errors
 RETRY_MAX_DELAY = 60  # seconds
 
 # App Configuration
-APP_NAME = "retail_location_strategy"
+APP_NAME = "property_location_strategy"
