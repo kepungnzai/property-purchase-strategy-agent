@@ -1,13 +1,3 @@
-"""Gemini image generation tool for creating infographics.
-
-Uses Google AI Studio (API key) for authentication.
-Uses gemini-3-pro-image-preview model for image generation.
-Requires GOOGLE_API_KEY environment variable to be set.
-
-Saves the generated infographic directly as an artifact using tool_context.save_artifact()
-so it's accessible in adk web UI.
-"""
-
 import base64
 import logging
 
